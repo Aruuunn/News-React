@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AboutMe from "./profile-page/aboutMe";
+import TopHeadline from "./top-headline";
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cur_page: 1,
+    };
+  }
+  changePage = () =>{
+    if(this.state.cur_page === 1)
+     this.setState({cur_page:2})
+     else{
+       this.setState({ cur_page: 1 });
+     }
+  }
+  render() {
+    return (
+      <div>
+        {this.state.cur_page === 1 ? <TopHeadline link={this.changePage}/> : <AboutMe link={this.changePage} />}
+      </div>
+    );
+  }
 }
 
 export default App;

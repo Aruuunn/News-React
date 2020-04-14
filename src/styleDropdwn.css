@@ -1,0 +1,41 @@
+.select-search{
+  height: 180px;
+  overflow: auto;
+  list-style: none;
+  width:350px;
+  
+  
+}
+
+input{
+  
+  width:350px;
+  padding:1vmin;
+  border-radius: 1vmin;
+}
+input:focus{
+  background-color: #f1f6fc;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+button{
+  width:350px;
+  background-color: white;
+  text-decoration: none;
+  display: inline-block;
+  border:0.5px solid #343a40;
+  transition: all 0.4s ease-out;
+  
+  
+}
+button:hover{
+  color:white;
+  background-color: #343a40;
+}
+
+
